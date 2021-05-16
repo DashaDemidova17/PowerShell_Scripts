@@ -11,4 +11,4 @@ if ($getArray = "null"){
 ConvertTo-Json $NameSurname | Add-Content $path <#C:\Users\Daria\Desktop\Tasks\PowerShell_Scripting\NameSurname.json#>
 
 #Проблема1: на первый запуск выходит ошибка Get-Content : Не удается найти путь, так как он не существует, но файл создается.
-#Проблема2: на третий запуск и далее выходит ошибка ConvertFrom-Json : Недопустимый примитив JSON, но при этом в файл все добавляется. 
+#Проблема2: на третий запуск и далее выходит ошибка ConvertFrom-Json : Недопустимый примитив JSON. 
