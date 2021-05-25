@@ -1,0 +1,15 @@
+{
+    "DatabaseName": "Advanta",
+    "DatabaseConnectionString": "\\Prod\\DBS\\Advanta",
+    "Size" : 100,
+    "Tables" : 
+    [
+        "Areas",
+        "Consumers",
+        "ConsumerAreas",
+        "Solutions",
+        "Orders",
+        "ReturnRequests",
+        "Clients"
+    ]
+}
