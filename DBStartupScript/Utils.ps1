@@ -7,7 +7,7 @@ function Read-Configuration()
 
     $configuration = Get-Content -Path $Path -Raw | ConvertFrom-Json
     return $configuration
-}
+} 
 
 function Confirm-ConfigurationValid()
 {
@@ -44,6 +44,6 @@ function Start-DatabaseServer()
         [PSCustomObject] $Configuration
     )
 
-    $argumentList = @($Configuration.DatabaseName, $Configuration.DatabaseConnectionString, $Configuration.Size, $Configuration.Tables[0].ToString(), $Configuration.Tables[1].ToString(), $Configuration.Tables[2].ToString(), $Configuration.Tables[3].ToString())
-    Start-Process -FilePath .\Bin\DBServer.exe -ArgumentList $argumentList
-}
+    $argumentList = @($Configuration.DatabaseName, $Configuration.DatabaseConnectionString, $Configuration.Size, $Configuration.Tables -Split ",")
+    Start-Process -FilePath .\Bin\DBServer.exe -ArgumentList ($argumentList)
+} 
